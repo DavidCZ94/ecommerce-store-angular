@@ -1,0 +1,17 @@
+<!-- Pipes: to use this Angular caracteristic we used this comand "|pipeNmae" 
+        In this case "variable|uppercase " we transform the content of "variable"
+        to uppercase -->
+<h3 appHigjlight>{{ product.title | uppercase }}</h3>
+<img [src]="product.image" alt="">
+<strong>
+        	<!-- currency pipe -->
+    {{ product.price | currency}}
+</strong>
+    <!-- Cut the elements with pipe called slice -->
+<p>{{ product.description | slice: 0:10 }}</p>
+
+<p>{{today | date: 'yyyy:HH:MM' }}</p>
+    <!-- (outputName)="method()" -->
+<button (click)="addCart()">Agregar al Carrito</button>
+
+<a [routerLink]="['/products', product.id]"> {{ product.id }}  Mas detalles</a>

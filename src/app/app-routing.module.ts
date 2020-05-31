@@ -1,11 +1,58 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+import { ContactComponent } from './contact/contact.component';
+import { DemoClassesComponent } from './demo-classes/demo-classes.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { LayoutComponent } from './layout/layout.component';
+import { AdminGuard } from './admin.guard';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        // with the next line we load a complete module
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+      },
+      {
+        path: 'products',
+        component: ProductsComponent
+      },
+      {
+        path: 'products/:id',
+        component: ProductDetailComponent
+      },
+      {
+        path: 'contact',
+        canActivate: [AdminGuard],
+        component: ContactComponent
+      }
+    ]
+  },
+  {
+    path: 'demo-classes',
+    component: DemoClassesComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 
-const routes: Routes = [];
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

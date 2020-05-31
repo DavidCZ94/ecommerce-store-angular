@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/swiper/css/swiper.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ecommerce-store"
+    }
+  },
+  "defaultProject": "ecommerce-store",
+  "cli": {
+    "analytics": false
+  }
 }
