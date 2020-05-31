@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
 import { DemoClassesComponent } from './demo-classes/demo-classes.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDetailComponent } from './products/Components/product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminGuard } from './admin.guard';
 import { NotFoundModule } from './not-found/not-found.module';
@@ -24,7 +23,7 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent
+        loadChildren: () => import('./products/products.module').then( m => m.ProductsModule),
       },
       {
         path: 'products/:id',
@@ -38,7 +37,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'demo-classes',
+    path: 'demo',
     component: DemoClassesComponent
   },
    {
