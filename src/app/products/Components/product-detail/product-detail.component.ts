@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { ProdutsService } from '../../../core/services/products/produts.service';
