@@ -1,17 +1,8 @@
-<!-- <section>
-    <h2>Object Products</h2>
-    <div *ngFor="let product of products">
-        {{ product.title }}
-        <img [src]="product.image" alt="" />
-        {{ product.price }}
-    </div>
-</section> -->
-
 <section>
     <div class="product-grid">
         <!-- [propety]="value" -->
         <!-- (outputName()="phatherComponentMethodReader($event)") -->
-        <app-product 
+        <app-product
             *ngFor='let product of products' 
             (productClicked)="clickProduct($event)" 
             [product]="product">
