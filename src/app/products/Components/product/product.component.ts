@@ -12,6 +12,8 @@ import {
 
 import { Product } from '../../../core/models/product.model';
 
+import { CartService } from './../../../core/services/cart.service';
+
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
@@ -23,6 +25,12 @@ export class ProductComponent {
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
     today = new Date();
+
+    constructor(
+        private cartService: CartService
+    ){
+
+    }
 
 /*     constructor(){
         console.log('1. Constructor');
@@ -48,9 +56,7 @@ export class ProductComponent {
     } */
 
     addCart(){
-        alert(`${this.product.title} Agregado al carrito exitosamente`);
-        // Emitting event
-        // this.productClicked.emit();
+        this.cartService.addCart(this.product);
     }
 
 }
