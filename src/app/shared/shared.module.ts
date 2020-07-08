@@ -9,19 +9,22 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { MaterialModule } from '../material/material.module';
+import { GroupCartProductsPipe } from './pipes/groupCartProducts/group-cart-products.pipe';
 
 @NgModule({
   declarations: [
     ExponentialPipe,
     HigjlightDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GroupCartProductsPipe
   ],
   exports: [
     ExponentialPipe,
     HigjlightDirective,
     HeaderComponent,
     FooterComponent,
+    GroupCartProductsPipe
   ],
   imports: [
     CommonModule,

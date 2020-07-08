@@ -26,27 +26,31 @@ const routes: Routes = [
         loadChildren: () => import('./products/products.module').then( m => m.ProductsModule),
       },
       {
-        path: 'products/:id',
-        component: ProductDetailComponent
-      },
-      {
         path: 'contact',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then( m => m.ContactModule),
       },
       {
         path: 'order',
         loadChildren: () => import('./order/order.module').then( m => m.OrderModule),
       },
+      {
+        path: 'products/:id',
+        component: ProductDetailComponent
+      },
+      {
+        path: 'demo',
+        loadChildren: () => import('./demo-classes/demo-classes.module').then( m => m.DemoClassesModule),
+      },
     ]
   },
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule)
-    },
+  },
   {
-    path: 'demo',
-    loadChildren: () => import('./demo-classes/demo-classes.module').then( m => m.DemoClassesModule),
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)
   },
    {
     path: '**',
