@@ -5,7 +5,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 
-import { AuthService } from './../../../core/services/auth/auth.service';
+import { AuthService } from '@core/services/auth/auth.service';
 
 
 @Component({

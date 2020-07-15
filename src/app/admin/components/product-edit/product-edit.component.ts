@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { MyValidators } from './../../../utils/validators';
+import { MyValidators } from '@utils/validators';
 
-import { ProdutsService } from './../../../core/services/products/produts.service';
+import { ProdutsService } from '@core/services/products/produts.service';
 
 @Component({
   selector: 'app-product-edit',

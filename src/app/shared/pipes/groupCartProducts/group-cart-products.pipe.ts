@@ -24,7 +24,7 @@ export class GroupCartProductsPipe implements PipeTransform {
         }
       }
     }
-    return uniqueProducts;
+    return productsCarArray;
   }
 
   private deleteRepeatedElements(value, index, self) {

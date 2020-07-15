@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
   emailField: FormControl;
 
   constructor() {
-    this.emailField = new FormControl('david', [
+    this.emailField = new FormControl('', [
       Validators.minLength(4),
       Validators.maxLength(10),
     ]);
