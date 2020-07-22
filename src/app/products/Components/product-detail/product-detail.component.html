@@ -11,7 +11,10 @@
             Descripcion: {{ product.description }}
         </p>
     </div>
-    <button (click)="createProduct()">Crear</button>
-    <button (click)="updateProduct()">Update</button>
-    <button (click)="deleteProduct()">Delete</button>
+    <button (click)="createProduct()" mat-raised-button color="primary">Crear</button>
+    <button (click)="updateProduct()" mat-raised-button color="primary">Update</button>
+    <button (click)="deleteProduct()" mat-raised-button color="primary">Delete</button>
+    <button (click)="getRandomUser()" mat-raised-button color="primary">GetRandomUsers</button>
+    <!-- <button (click)="getFile()">GetFile</button> -->
+    <a href="assets/files/test.txt" download="test.txt" mat-raised-button color="primary">Download test file</a>
 </div>

@@ -5,6 +5,7 @@ import { ProdutsService } from '@core/services/products/produts.service';
 import { Product } from '@core/models/product.model';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-product-detail',
@@ -61,6 +62,26 @@ export class ProductDetailComponent implements OnInit {
     .subscribe( rta => {
       console.log(rta);
     });
+  }
+
+  getRandomUser(){
+    this.produtsService.getRandomUsers()
+    .subscribe(
+      users => { //ok
+        console.log(users);
+        },
+      error => {
+        console.error(error);
+        }
+      )
+  }
+
+  getFile(){
+    this.produtsService.getFile()
+    .subscribe(content => {
+      console.log(content);
+    })
+
   }
 
 }

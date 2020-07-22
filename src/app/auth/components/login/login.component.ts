@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       })
       .catch(() => {
         alert('No es valido');
-      })
+      });
     }
   }
 
@@ -42,6 +42,13 @@ export class LoginComponent implements OnInit {
     this.form = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
+    });
+  }
+
+  loginRest(){
+    this.authService.loginRestIpi('david@cabrera.com', '1234')
+    .subscribe(data => {
+      console.log(data);
     });
   }
 
