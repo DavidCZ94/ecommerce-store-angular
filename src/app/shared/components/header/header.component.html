@@ -1,5 +1,16 @@
-<nav>
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/products" routerLinkActive="active">Products</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
-</nav>
+<mat-toolbar id="mat-toolbar">
+    <mat-toolbar-row>
+        <div class="row between-xs middle-xs header-row">
+            <nav>
+                <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+                <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
+                <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+            </nav>
+            <!-- "total$ | async" this is a pipes uded to Observe changes in a obsevable variable -->
+            <a routerLink="/order" mat-raised-button [matBadge]="total$ | async" matBadgeColor="accent">
+            <mat-icon>shopping_cart</mat-icon>
+                Carrito de compras
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

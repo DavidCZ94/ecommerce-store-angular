@@ -1,0 +1,38 @@
+<!-- Pipes: to use this Angular caracteristic we used this comand "|pipeNmae" 
+    In this case "variable|uppercase " we transform the content of "variable"
+    to uppercase -->
+    <mat-card>
+        <mat-card-header>
+            
+            <mat-card-title>
+                <h3 >{{ product.title | uppercase }}</h3>
+            </mat-card-title>
+            
+            <mat-card-subtitle>
+                <strong>
+                    <!-- currency pipe -->
+                    {{ product.price | currency}}
+                </strong>
+            </mat-card-subtitle>
+        
+        </mat-card-header>
+
+        <div class="crop-image">
+            <img [src]="product.image" alt="">
+        </div>
+
+        <mat-card-content>
+            <p>{{ product.description | slice: 0:10 }}</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <!-- (outputName)="method()" -->
+            <a mat-raised-button [routerLink]="['/products', product.id]"> {{ product.id }}  Mas detalles</a>
+            <button mat-raised-button color="primary" (click)="addCart()">Agregar al Carrito</button>
+        </mat-card-actions>
+
+</mat-card>
+
+<!-- Cut the elements with pipe called slice -->
+<!-- <p>{{today | date: 'yyyy:HH:MM' }}</p> -->
+

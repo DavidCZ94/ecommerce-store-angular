@@ -1,8 +1,22 @@
+@import '~@angular/material/theming';
+
+$primary: mat-palette($mat-blue-grey);
+
+
+#mat-toolbar{
+    background-color: mat-color($primary);
+    color: white;
+}
+
 nav > a {
     padding: 5px;
     text-decoration: none;
 }
 
 nav > a.active {
-    background-color: blue;
+    background-color: rgb(61, 78, 87);
+}
+
+.header-row{
+    width: 100%;
 }
