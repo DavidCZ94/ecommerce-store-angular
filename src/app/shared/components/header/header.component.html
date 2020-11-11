@@ -5,6 +5,8 @@
                 <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
                 <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
                 <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+                <a mat-button routerLink="/admin" routerLinkActive="active">Admin</a>
+                <a mat-button routerLink="/demo" routerLinkActive="active" style="display: none;">Practice</a>
             </nav>
             <!-- "total$ | async" this is a pipes uded to Observe changes in a obsevable variable -->
             <a routerLink="/order" mat-raised-button [matBadge]="total$ | async" matBadgeColor="accent">

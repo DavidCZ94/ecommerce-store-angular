@@ -41,22 +41,21 @@ const routes: Routes = [
         path: 'demo',
         loadChildren: () => import('./demo-classes/demo-classes.module').then( m => m.DemoClassesModule),
       },
+      {
+        path: 'admin',
+        canActivate: [AdminGuard],
+        loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule)
+      },
+      {
+        path: 'auth',
+        loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)
+      },
+       {
+        path: '**',
+        loadChildren: () => import('./not-found/not-found.module').then( m => NotFoundModule),
+      }
     ]
-  },
-  {
-    path: 'admin',
-    canActivate: [AdminGuard],
-    loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule)
-  },
-  {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)
-  },
-   {
-    path: '**',
-    loadChildren: () => import('./not-found/not-found.module').then( m => NotFoundModule),
   }
-
 ];
 
 @NgModule({
