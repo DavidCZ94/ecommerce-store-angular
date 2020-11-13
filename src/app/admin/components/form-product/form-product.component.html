@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col xs">
                     <mat-form-field>
-                        <input placeholder="Id" formControlName="id" matInput type="text">
+                        <input class="input-with" placeholder="Id" formControlName="id" matInput type="text">
                     </mat-form-field>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col xs">
+                <div class="col xs" style="text-align: center;">
                     <img  *ngIf="(image$ | async) as image" [src]="image" alt="">
                     <input type="file" (change)="uploadFile($event)">
                 </div>
