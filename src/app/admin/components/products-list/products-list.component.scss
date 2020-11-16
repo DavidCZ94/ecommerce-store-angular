@@ -2,6 +2,17 @@
     width: 96%;
     margin: 2%;
 }
- a{
+
+a{
     margin-top: 20px;
- }
+}
+
+.products-table .ng-conatainer-actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.products-table .ng-conatainer-actions a{
+    margin: 10px 10px 10px 10px;
+}

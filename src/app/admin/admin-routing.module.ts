@@ -22,10 +22,10 @@ const routes: Routes = [
         path: '',
         component: DashboardComponent
       },
-      {
+/*       {
         path: 'table',
         component: TableComponent
-      },
+      }, */
       {
         path: 'products',
         component: ProductsListComponent

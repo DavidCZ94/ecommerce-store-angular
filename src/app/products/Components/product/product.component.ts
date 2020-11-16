@@ -32,6 +32,10 @@ export class ProductComponent {
 
     }
 
+    addCart(){
+        this.cartService.addCart(this.product);
+    }
+
 /*     constructor(){
         console.log('1. Constructor');
     }
@@ -54,9 +58,5 @@ export class ProductComponent {
     ngOnDestroy(): void {
         console.log('5. ngOnDestroy');
     } */
-
-    addCart(){
-        this.cartService.addCart(this.product);
-    }
 
 }

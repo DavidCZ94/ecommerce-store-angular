@@ -1,3 +1,12 @@
+@import '~@angular/material/theming';
+
+$primary: mat-palette($mat-blue-grey);
+
+.mat-toolbar{
+  background-color: mat-color($primary);
+  color: white;
+}
+
 .sidenav-container {
   height: 100%;
 }

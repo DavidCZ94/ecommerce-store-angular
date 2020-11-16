@@ -28,7 +28,7 @@ export class ProductsContainer implements OnInit {
     this.produtsService.getAllProducts()
     .subscribe(products => {
       this.products = products;
-    })
+    });
   }
 
 }
