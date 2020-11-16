@@ -1,9 +1,10 @@
 <footer>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-sm-4 footer-row align-sm-center">
           <div class="box">
-            <h3>Productos</h3>
+            <h2>Productos</h2>
+            <hr>
             <ul>
               <li>
                 <a routerLink="/products" [queryParams]="{ type: 'news' }"
@@ -20,19 +21,22 @@
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-sm-4 footer-row align-sm-center">
           <div class="box">
-            <h3>Acerca de Elysian Store</h3>
+            <h2>Acerca de Elysian Store</h2>
+            <hr>
             <ul>
               <li><a routerLink="/about-us">Sobre nosotros</a></li>
               <li><a routerLink="/stores">Nuestras tiendas</a></li>
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-sm-4 footer-row align-sm-center">
           <div class="box">
-            <h3>Contacto</h3>
+            <h2>Contacto</h2>
+            <hr>
             <mat-form-field>
+              <mat-label>Email</mat-label>
               <input matInput placeholder="Escribe tu correo" [formControl]="emailField" type="email">
             </mat-form-field>
             <button mat-raised-button [disabled]="emailField.invalid" (click)="sendMail()">Enviar</button>
