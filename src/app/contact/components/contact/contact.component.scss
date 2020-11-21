@@ -1,0 +1,21 @@
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+mat-card{
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  display: block;
+}
+mat-form-field{
+  width: 90%;
+}
