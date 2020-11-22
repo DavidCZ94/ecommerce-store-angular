@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { PageEvent} from '@angular/material/paginator';
 
 import { ProdutsService } from '@core/services/products/produts.service';
 
@@ -11,6 +12,10 @@ export class ProductsListComponent implements OnInit {
 
   products = [];
   displayedColumns: string[] = ['id', 'title', 'price', 'actions'];
+
+  page_size : number = 10;
+  page_number : number = 1;
+  pageSizeOptions = [10, 20, 50, 100];
 
   constructor(
     private produtsService: ProdutsService
@@ -32,6 +37,11 @@ export class ProductsListComponent implements OnInit {
     .subscribe( rta => {
       this.fetchProducts()
     })
+  }
+
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize;
+    this.page_number = e.pageIndex + 1;
   }
 
 }

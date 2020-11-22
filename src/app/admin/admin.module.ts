@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { FormProductComponent } from './components/form-product/form-product.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ProductEditComponent } from './components/product-edit/product-edit.com
     AdminRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
+    SharedModule
   ]
 })
 export class AdminModule { }
