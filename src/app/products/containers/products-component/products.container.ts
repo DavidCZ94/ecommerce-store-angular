@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { Product } from '@core/models/product.model';
 import { ProdutsService } from '@core/services/products/produts.service'
 
@@ -13,6 +14,9 @@ export class ProductsContainer implements OnInit {
 
   products: Product[] = [];
 
+  page_size : number = 9;
+  page_number : number = 1;
+  pageSizeOptions = [9, 24, 54, 90];
 
   constructor(private produtsService: ProdutsService) { }
 
@@ -29,6 +33,11 @@ export class ProductsContainer implements OnInit {
     .subscribe(products => {
       this.products = products;
     });
+  }
+
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize;
+    this.page_number = e.pageIndex + 1;
   }
 
 }

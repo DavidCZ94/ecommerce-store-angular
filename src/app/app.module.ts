@@ -22,7 +22,7 @@ import { environment } from './../environments/environment';
 import * as Sentry from '@sentry/browser';
 import { AuthInterceptor } from './auth.interceptor';
 
-//environment.production
+// environment.production
 
 Sentry.init({
   dsn: 'https://78e073f9fbf3429a93b0f14a168f1138@o420984.ingest.sentry.io/5340087',
@@ -49,7 +49,7 @@ Sentry.init({
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
   ],
   providers: [
     {

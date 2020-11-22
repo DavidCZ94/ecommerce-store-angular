@@ -9,12 +9,11 @@ import { ProductDetailComponent } from './Components/product-detail/product-deta
 import { SharedModule } from '@shared/shared.module';
 import { MaterialModule } from '@material/material.module';
 
-
 @NgModule({
     declarations: [
         ProductsContainer,
         ProductComponent,
-        ProductDetailComponent
+        ProductDetailComponent,
     ],
     imports:[
         CommonModule,

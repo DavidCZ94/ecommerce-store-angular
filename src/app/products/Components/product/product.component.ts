@@ -26,11 +26,7 @@ export class ProductComponent {
 
     today = new Date();
 
-    constructor(
-        private cartService: CartService
-    ){
-
-    }
+    constructor(private cartService: CartService){}
 
     addCart(){
         this.cartService.addCart(this.product);

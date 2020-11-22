@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { MaterialModule } from '@material/material.module';
 import { GroupCartProductsPipe } from './pipes/groupCartProducts/group-cart-products.pipe';
+import { PaginatorPipe } from './pipes/paginator/paginator.pipe';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,16 @@ import { GroupCartProductsPipe } from './pipes/groupCartProducts/group-cart-prod
     HigjlightDirective,
     HeaderComponent,
     FooterComponent,
-    GroupCartProductsPipe
+    GroupCartProductsPipe,
+    PaginatorPipe
   ],
   exports: [
     ExponentialPipe,
     HigjlightDirective,
     HeaderComponent,
     FooterComponent,
-    GroupCartProductsPipe
+    GroupCartProductsPipe,
+    PaginatorPipe
   ],
   imports: [
     CommonModule,

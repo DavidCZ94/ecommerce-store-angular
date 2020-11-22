@@ -1,11 +1,15 @@
 <section>
+    <mat-paginator [length]="products.length"
+    [pageSize]="page_size"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="handlePage($event)">
+    </mat-paginator>
+    
     <div class="product-grid">
-        <!-- [propety]="value" -->
-        <!-- (outputName()="phatherComponentMethodReader($event)") -->
-        <app-product
-            *ngFor='let product of products' 
-            (productClicked)="clickProduct($event)" 
-            [product]="product">
+        <app-product *ngFor="let product of products | paginator:page_size:page_number"
+        (productClicked)="clickProduct($event)" 
+        [product]="product">
         </app-product>
     </div>
+
 </section>
