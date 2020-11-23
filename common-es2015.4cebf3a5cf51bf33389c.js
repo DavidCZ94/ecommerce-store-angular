@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{"4ICB":function(n,e,r){"use strict";r.d(e,"a",(function(){return a}));var t=r("fXoL");let a=(()=>{class n{transform(n,e,r){return n.length?"all"===e?n:(r=r||1,--r,n.slice(r*(e=e||5),(r+1)*e)):[]}}return n.\u0275fac=function(e){return new(e||n)},n.\u0275pipe=t.Ob({name:"paginator",type:n,pure:!0}),n})()}}]);
