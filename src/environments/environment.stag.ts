@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   url_api: 'https://platzi-store-stag.herokuapp.com',
   firebase : {
     apiKey: 'AIzaSyBtdo05qgGdY2zHeZhps2DF0Aq-NRUjNH8',
