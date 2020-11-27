@@ -1,5 +1,13 @@
 # EcommerceStore
 
+This is a project created using angular and implementing a lot of features of this framework like a routing, ngfor, Lazy Loading, Guards, differential loading....
+
+This aplication is a simulation of a ecommerce store were you can see, edit, create and delete the products thar are rederized in the interfaz. This actions will be done from admin module which is designed precisely to manage the store, to obtain acces to this module you can acces with the next data Email: admin@store.com, password: admin123. 
+
+Also in this project has been used Material angular to give styles and improve the user experience whit this app. 
+
+# EcommerceStore
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
 ## Development server
