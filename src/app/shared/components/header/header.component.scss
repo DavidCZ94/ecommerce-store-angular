@@ -2,6 +2,17 @@
 
 $primary: mat-palette($mat-blue-grey);
 
+@media (max-width: 500px){
+    #mat-toolbar{
+        height: 100px;
+    }
+    #matBar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
 
 #mat-toolbar{
     background-color: mat-color($primary);
